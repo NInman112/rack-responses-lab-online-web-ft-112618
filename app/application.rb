@@ -1,9 +1,12 @@
-class Application 
+class Application
   def call(env)
-    resp = Rack::Response.new 
-
-
+    resp = Rack::Response.new
+    if #Morning
+      resp.write "Morning"
+    else #Afternoon
+      resp.write "Afternoon"
+    end 
     resp.finish
-  end 
+  end
 
-end 
+end
